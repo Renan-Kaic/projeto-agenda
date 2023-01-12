@@ -1,0 +1,33 @@
+# Arquivos gerados pelo npm
+node_modules/
+node_modules
+# Arquivos gerados pelo gulp
+dist/
+
+# Arquivos gerados pelo webpack
+bundle.js
+
+# Arquivos de configuração do eslint
+.eslintrc
+.eslintignore
+
+# Arquivos de configuração do babel
+.babelrc
+
+# Arquivos de configuração do jest
+jest.config.js
+
+# Arquivos gerados pelo jest
+coverage/
+
+# Arquivos gerados pelo storybook
+.out/
+
+# Arquivos gerados pelo styled-components
+.styled-components-babel-plugin/
+
+# Arquivos gerados pelo cypress
+cypress/
+.vscode
+.vscode/
+.env

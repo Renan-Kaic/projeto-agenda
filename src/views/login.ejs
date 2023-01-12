@@ -1,0 +1,78 @@
+<%- include('./includes/head.ejs') %>  
+    <%- include('./includes/nav.ejs') %>
+    <head>
+        <title>Login</title>
+    </head>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-8 my-5">
+                    <!--<h1 class="display-1 text-center">LOGIN</h1>-->
+                    <p class="text-center lead">Para acessar, faça login ou cadastre-se</p>
+                    <%- include('./includes/alertMsg') %>  
+
+                    <div class="row">
+                        <div class="col-lg">
+                            <h4>Faça seu Cadastro</h4>
+                            <br>
+                            
+                            <form class="form-cadastro" action="/login/cadastro" method="post">
+                              <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                                <div class="mb-3">
+                                  <label for="InputEmail" class="form-label">Endereço de Email</label>
+                                  <input type="email" class="form-control" id="InputEmail" name="Email">
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="InputSenha" class="form-label">Senha</label>
+                                  <input type="password" class="form-control" id="Senha" name="Senha">
+                                </div>
+
+                                <!-- <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                -->
+
+                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+                              </form>
+                        </div>
+                        
+                        <div class="col-lg">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <h4>Faça login</h4>
+                                    <br>
+                                    <form action="/login/login" method="POST">
+                                      <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                                        <div class="mb-3">
+                                          <label for="InputEmail" class="form-label">Endereço de Email</label>
+                                          <input type="email" class="form-control" id="InputEmail" name="Email">
+                                        </div>
+        
+                                        <div class="mb-3">
+                                          <label for="InputSenha" class="form-label">Senha</label>
+                                          <input type="password" class="form-control" id="Senha" name="Senha">
+                                        </div>
+        
+                                        <!-- <div class="mb-3 form-check">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        -->
+        
+                                        <button type="submit" class="btn btn-primary">Fazer login</button>
+        
+                                      </form>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+
+            <%- include('./includes/footer.ejs') %>
